@@ -15,8 +15,8 @@ console.log(names);
 
 // -------------string
 
-let bancod = "nasir";
-console.log(bancod);
-console.log(bancod.length);
-console.log(bancod[0]);
-bancod[0]="k"
+let names = "Anindita";
+console.log(names);
+console.log(names.length);
+console.log(names[0]);
+names[0]="k"
