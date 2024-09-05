@@ -11,6 +11,7 @@ let names = ["montu", "jhontu", "pontu"];
 console.log(names);
 names[1] = "boltu";
 console.log(names);
+// eita array eijonno change kora jabe
 
 
 // -------------string
@@ -19,4 +20,6 @@ let names = "Anindita";
 console.log(names);
 console.log(names.length);
 console.log(names[0]);
-names[0]="k"
+names[0] = "k"
+
+// eita ekta string tai kono chage hobe na
