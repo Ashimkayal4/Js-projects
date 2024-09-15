@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM onclick</title>
+  </head>
+  <body>
+    <main>
+      <button onclick="document.body.style.backgroundColor='red'">Red</button>
+      <button onclick="pink()">Pink</button>
+      <button id="make-green">Green</button>
+      <button id="make-blue">Blue</button>
+      <button id="make-yellow">yellow</button>
+      <button id="make-orange">Orange</button>
+      <button id="make-goldenrod">Goldenrod</button>
+    </main>
+
+
+    <!-- Javascript inside HTML -->
+    <script>
+      
+      // option-2 ----> it will call inside css [<button onclick="pink()">Pink</button>]
+      function pink() {
+        document.body.style.backgroundColor = "pink";
+      }
+
+      // option-3
+
+      const makeGreen = document.getElementById("make-green");
+      makeGreen.onclick = green;
+      function green() {
+        document.body.style.backgroundColor = "green";
+      }
+
+      // option-3 another way
+      const makeBlue = document.getElementById("make-blue");
+      makeBlue.onclick = function purple() {
+        document.body.style.backgroundColor = "blue";
+      };
+
+      // option-4
+      const makeYellow = document.getElementById("make-yellow");
+      makeYellow.addEventListener("click", yellow);
+      function yellow() {
+        document.body.style.backgroundColor = "yellow";
+      }
+
+      // option-4 another way
+      const makeOrange = document.getElementById("make-orange");
+      makeOrange.addEventListener("click", function () {
+        document.body.style.backgroundColor = "orange";
+      });
+
+      // option-4 another way
+
+      document.getElementById("make-goldenrod").addEventListener("click", function () {
+          document.body.style.backgroundColor = "goldenrod";
+        });
+    </script>
+  </body>
+</html>

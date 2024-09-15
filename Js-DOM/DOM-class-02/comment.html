@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new comment</title>
+  </head>
+  <body>
+    <div>
+      <h1>Add your comment</h1>
+    </div>
+    <div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+        voluptatibus esse, molestias qui fuga reprehenderit laboriosam vel
+        blanditiis cupiditate et aspernatur. Cum iste repudiandae modi dolorum
+        quisquam quam! Dolore, magnam! Cupiditate commodi ipsa minima veniam
+        exercitationem beatae officiis neque? Excepturi commodi autem
+        perspiciatis sunt consequatur odit nemo, nesciunt inventore at.
+      </p>
+      <p>
+        Nam magnam distinctio ullam consequuntur quasi quae fuga error ipsa
+        dolore doloribus debitis, maxime pariatur impedit fugit, illum et ut
+        eius? Facilis libero laborum vel cum amet eveniet, quis aliquam voluptas
+        accusantium corporis magnam numquam a officiis voluptatibus similique
+        odit, eius laudantium quae quo? Expedita cum ut dolore ullam aut.
+      </p>
+      <p>
+        Cupiditate ex voluptatum autem et pariatur adipisci corrupti nobis
+        ducimus ratione amet porro consequatur aliquid dolor, provident quam
+        quibusdam quos perferendis nisi? Error sunt vero architecto quae ab hic
+        explicabo eius aliquid? Dolor voluptatibus reiciendis consectetur
+        doloremque illum fugiat commodi ab provident, vitae quia. Veritatis
+        ipsam temporibus laudantium neque expedita?
+      </p>
+      <p id="add-field"></p>
+    </div>
+    <div>
+      <textarea name="" id="input-field" cols="60" rows="5"></textarea>
+      <br />
+      <button id="post-btn">Post</button>
+    </div>
+
+    
+    <!-- Javascript inside HTML -->
+    <script>
+      document.getElementById("post-btn") .addEventListener("click", function () {
+        const inputField = document.getElementById("input-field");
+        const inputValue = inputField.value;
+        const add = document.getElementById("add-field");
+        const p = document.createElement("p");
+        p.innerText = inputValue;
+        add.appendChild(p);
+        inputField.value = "";
+        });
+    </script>
+  </body>
+</html>
