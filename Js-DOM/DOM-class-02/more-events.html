@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+</head>
+<body>
+    <button id="event-btn">Events</button>
+    <input id="input-field" type="text">
+    <input id="input-field-2" type="text">
+
+
+    <!-- Javascript inside HTML -->
+    <script>
+        // mouseenter / mousemove / click ... are some events example below.
+        document.getElementById('event-btn').addEventListener('click',function(){
+            console.log("btn is trigged inside the event")
+        })
+
+        // mouseenter---->> when we enter mouse inside the btn it will trigger.
+        document.getElementById('event-btn').addEventListener('mouseenter',function(){
+            console.log("btn is trigged inside the event")
+        })
+
+        // mousemove---->> when we move mouse inside the btn it will trigger and shows how many time we trigger.
+        document.getElementById('event-btn').addEventListener('mousemove',function(){
+            console.log("btn is trigged inside the event")
+        })
+
+        // input field examples.
+        // focus--->> when it focus mode input field-border become dark
+        document.getElementById('input-field').addEventListener('focus',function(){
+            console.log("Input field is trigged inside input field")
+        })
+
+        // blur ---->>blur events trigger input field outside input field.
+        document.getElementById('input-field').addEventListener('blur',function(){
+            console.log("Input field is trigged outside input field")
+        })
+
+        // keyup---->> keyup event it can finds what we write
+        document.getElementById('input-field-2').addEventListener('keyup',function(event){
+            console.log(event.target.value)
+        })
+
+        // keydown---->> keydown is similar to keyup but keydown find one key letter.
+        document.getElementById('input-field-2').addEventListener('keydown',function(event){
+            console.log(event.target.value)
+        })
+
+
+    </script>
+</body>
+</html>
