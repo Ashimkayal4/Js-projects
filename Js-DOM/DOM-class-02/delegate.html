@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>Exploring Event Delegate</h1>
+    <section>
+        <ul id="list-container">
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Ex eius quibusdam hic quidem!</li>
+            <li class="item">Dolores voluptas animi ab labore.</li>
+            <li class="item">Ea deserunt in incidunt harum.</li>
+            <li class="item">Aspernatur magni corrupti soluta tenetur.</li>
+            <li class="item">Quos nesciunt eaque amet veniam.</li>
+        </ul>
+    </section>
+    <button id="add-new">Add New</button>
+
+
+    <!-- Javascript -->
+    <script>
+        const items=document.getElementsByClassName('item');
+        console.log(items)
+        for(const item of items){
+           item.addEventListener('click',function(event){
+
+            //  we can get parentNode by className..
+
+            //  option:1  
+            console.log(item.parentNode)
+            //  option:2 
+            console.log(event.target.parentNode)
+            
+            //  we can delete or remove child from this items
+            event.target.parentNode.removeChild(event.target);
+
+           })
+        }
+
+        // when we click it will delete child and when we click add btn it will add child.
+        document.getElementById('list-container').addEventListener('click',function(event){
+            event.target.parentNode.removeChild(event.target);
+        })
+
+
+        document.getElementById('add-new').addEventListener('click',function(){
+            const listContainer=document.getElementById('list-container');
+            const li= document.createElement('li');
+            li.innerText="Brand New Child"
+            listContainer.appendChild(li)
+        })
+    </script>
+</body>
+</html>
